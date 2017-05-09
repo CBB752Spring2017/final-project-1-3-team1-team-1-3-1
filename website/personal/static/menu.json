@@ -1,0 +1,21 @@
+{"name":"bubble", "children": [
+{"name":"Network","description":"Network Analysis",
+"children":[
+    {"name": "Protein Network","address":"http://www.yale.edu", "note":"James, Frank & Jerome"},
+    {"name": "Degree Centrality","address":"http://www.yale.edu","note":"Degree Centrality"},
+    {"name": "Betweenness Centrality","address":"http://www.yale.edu", "note":"Betweenness Centrality"}
+]},
+{"name": "Mutation", "description": "Deleteriousness Estimation of Mutations",
+"children":[
+    {"name":"SNP","address":"http://www.yale.edu","note":"SNPs"},
+    {"name":"Indels","address":"http://www.yale.edu", "note":"Insertion or Deletion"},
+    {"name":"Estimation","address":"http://www.yale.edu","note":"Deleteriousness Estimation Megan, Yuyang & Jerome"}
+]},
+{"name":"Data", "description":"Data from CBB752",
+"children":[
+    {"name":"BAM","address":"https://zimmerome.gersteinlab.org/2016/05/06/part01_gerstein/"},
+    {"name":"Mutations","address":"https://zimmerome.gersteinlab.org/2016/05/06/part01_gerstein/"},
+    {"name":"Protein Network","address":"https://zimmerome.gersteinlab.org/2016/05/06/part01_gerstein/"}
+
+]}
+]}
