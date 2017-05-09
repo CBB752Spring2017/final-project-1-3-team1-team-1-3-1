@@ -105,12 +105,12 @@ Both PROVEAN and SIFT identified the same number of nonsynonymous, synonymous, a
 
 
 [SubjectZ SNV Rankings](https://github.com/CBB752Spring2017/final-project-1-3-team1-team-1-3-1/blob/master/polyphen%20damaging%20rankings.xlsx)
-![text](https://github.com/CBB752Spring2017/final-project-1-3-team1-team-1-3-1/blob/master/pipeline_and_graphs.docx)
+![text](https://github.com/CBB752Spring2017/final-project-1-3-team1-team-1-3-1/blob/master/pipeline_graphs.png)
 
 
 References:
 
-Adzhubei I, Jordan DM, Sunyaev SR. Predicting Functional Effect of Human Missense Mutations Using PolyPhen-2. Current protocols in human genetics / editorial board, Jonathan L Haines . [et al]. 2013;0 7:Unit7.20. doi:10.1002/0471142905.hg0720s76.
+Adzhubei I, Jordan DM, Sunyaev SR. Predicting Functional Effect of Human Missense Mutations Using PolyPhen-2. Current protocols in human genetics / editorial board, Jonathan L Haines . [et al]. 2013;0 7:Unit7.20. 
 
 Choi Y., Chan A.P. PROVEAN web server: a tool to predict the functional effect of amino acid substitutions and indels. Bioinformatics. 2015;31(16):2745-2747. 
 
