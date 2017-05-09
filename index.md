@@ -23,7 +23,8 @@ Table of Contents
 
 
 ### Introduction:
-functional implications of SNP  
+Functional implications of SNP  
+
 This project aims at predicting the deleteriousness of SNVs in Carl’s genome. Single nucleotide variants in the coding region of the DNA sequence are likely to affect the structure of the protein product and lead to observable impacts on physiological functioning and disease propensity. Coding region mutations could be classified as silent, missense, nonsense or frameshift mutations based upon the changes in codons and open reading frame. However, deleteriousness could vary significantly among mutations of the same category, and an applicable method to assess deleteriousness must rely upon a more comprehensive prioritization scheme. The standard for determining mutation deleteriousness could either be based upon biochemical or evolutionary information. Bioinformatics tools such as VIPUR incorporates both structural and evolutionary information as the training dataset of the program (Baugh et al., 2016). This strategy allows better analysis of rare proteins with seldom any homology while avoid the oversimplified assumptions of a purely structural approach. However, due to the limited scope for this project, we’ve chosen a first-principle approach that doesn’t involve extensive alignment with homologues. 
 
 
@@ -31,6 +32,38 @@ This project aims at predicting the deleteriousness of SNVs in Carl’s genome. 
 
 ### Writing:
 
+Design of our codes  
+In the current design of our software, a deleteriousness score between 0 and 1 is calculated for each SNV tested. SNVs from input data are divided into three major categories: 1. indels and introduction or disruption of stop codons; 2. single amino acid substitution and 3. synonymous mutations. Initial deleteriousness scores of 0.8, 0.5 and 0 are assigned for each category, respectively. Frameshift and alteration in stop codons that introduces the addition, deletion or substitution of more than 5 amino acids from the ORF will have an additional 0.20 increase in deleteriousness score. Otherwise, change in each amino acid will yield a 0.04 increase in deleteriousness.  
+Deleteriousness score for the substitution of single amino acid will be determined by calculating deviance of the substituted amino acid in pKa (-NH2), pKa(-COOH),pKa(R), solubility and side chain volume from the original amino acid residue. Evolutionary constraint upon single amino acid substitution derived from Genomic Evolutionary Rate Profiling is incorporated as an additional dimension (Cooper et al., 2005).  
+For synonymous mutations, a minor score is added to the output by calculating the changes in codon bias from the codon usage bias table. New codons more favored will not change the value of the output; for the introduction of codons less favored than the original one, the addition in deleterious score is calculated as 0.01x (fraction of original codon usage – fraction of new codon usage) / (fraction of original codon usage).  
+
+  
+  
+Additional information not included  
+  
+
+
+Single amino acid conformation vs. chemical environment  
+The distribution of amino acid psi and phi angles has a significant impact upon the local conformation of peptide chain. Introduction of amino acids that has unusual distribution of phi and psi angles (for example proline or glycine) is likely to disrupt local secondary structure and yield functionally defective proteins. However, the impact of altered backbone conformation may vary according to the chemical environment of a particular residue. The same principle also applies for changes in side chain hydrophobicity and bulkiness Residues that are buried in the interior of a protein fold and essential for protein folding might be more sensitive to changes in side chain size and hydrophobicity, while the linker peptide between folds would adopt a more relaxed conformation and less susceptible to changes in folding and function upon single amino acid substitution. Predicting protein domains and folds is aided by computational comparison across homologues and molecular modeling (Cooper and Shendure, 2011); however, processing large amount of SNVs in structural simulation is still a computationally demanding task.  
+  
+Active and modification sites  
+Amino acid residues at enzyme active and crucial modification sites are highly conserved; thus evolutionary information is essential in the detection of deleterious mutations in these regions. However, certain post-translational modifications (ubiquitination, O-GlcNAcylation) utilize multiple sites on the target protein to fine-tune the protein function (Bond and Hanover, 2015). Assessing the deleteriousness of mutations at these modification sites could be challenging at the absence of relevant experimental data. In addition, rules governing the binding of those modification enzymes are less well characterized. Mutations on protein surface that potentially hinders interaction with modification enzymes add yet another layer of complexity to the problem.  
+  
+Haploinsufficiency and Dosage effect  
+Nonsense mutations could be either innocuous or harmful depending upon the haploinsufficiency of the gene. It should be noted that the distinction between haplosufficient and haploinsufficient genes might not be absolute; the functional impact of gene dosage could vary across a wide spectrum.  Predicting haploinsufficiency relies upon relevant experimental and clinical data; on the other hand, assessing the impact of a particular mutation upon the “effective dosage” of a protein-encoded gene requires additional bioinformatics resources.  
+  
+Isoforms and splicing variants  
+Alternative splicing is essential for cellular function especially in tissues such as the CNS, and mutations that affect splicing patterns have been linked to genetic diseases(Wang and Cooper, 2007). SNVs could alter splicing pattern through 1. directly disrupting 5’ and 3’ splice sites; 2. activating cryptic splice site; 3. affect binding of splicing factors to ESE, ESS, ISE and ISS. Mutations in intronic splicing enhancers or silencers, despite located in non-coding regions, could significantly alter the sequences of product peptides. Incorporating splice site prediction could thus provide useful information to SNV deleteriousness assessment.  
+The deleteriousness of mutations specific to a few isoforms could be challenging to assess if the physiological functions of different isoforms remain largely unknown. Computationally, estimating the functional impact of such mutations is intrinsically defective without supporting data from experiments.  
+  
+  
+Reference:  
+
+Baugh, E.H., Simmons-Edler, R., Müller, C.L., Alford, R.F., Volfovsky, N., Lash, A.E., and Bonneau, R. (2016). Robust classification of protein variation using structural modelling and large-scale data integration. Nucleic Acids Research 44, 2501-2513.  
+Bond, M.R., and Hanover, J.A. (2015). A little sugar goes a long way: The cell biology of O-GlcNAc. The Journal of Cell Biology 208, 869.  
+Cooper, G.M., and Shendure, J. (2011). Needles in stacks of needles: finding disease-causal variants in a wealth of genomic data. Nat Rev Genet 12, 628-640.  
+Cooper, G.M., Stone, E.A., Asimenos, G., Green, E.D., Batzoglou, S., and Sidow, A. (2005). Distribution and intensity of constraint in mammalian genomic sequence. Genome Research 15, 901-913.  
+Wang, G.-S., and Cooper, T.A. (2007). Splicing in disease: disruption of the splicing code and the decoding machinery. Nat Rev Genet 8, 749-761.  
 
 
 
