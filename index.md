@@ -105,7 +105,7 @@ Both PROVEAN and SIFT identified the same number of nonsynonymous, synonymous, a
 
 
 [SubjectZ SNV Rankings](https://github.com/CBB752Spring2017/final-project-1-3-team1-team-1-3-1/blob/master/polyphen%20damaging%20rankings.xlsx)
-![text](https://github.com/CBB752Spring2017/final-project-1-3-team1-team-1-3-1/blob/master/pipelinegraph.png)
+![text](https://github.com/CBB752Spring2017/final-project-1-3-team1-team-1-3-1/blob/master/pipeline_and_graphs.docx)
 
 
 References:
