@@ -226,21 +226,27 @@ def deleteriousness_estimation(snv_element):
 
 ## build the score dict
 deleteriousness_est = {}
-
+score_est = {}
 ## calculate the deleteriousness score
 index = 0
 for snv in id_list:
     tmp_score = deleteriousness_estimation(snv_dict[snv])
     deleteriousness_est[snv] = [snv_dict[snv][0][1],snv_dict[snv][0][2],tmp_score]
+    score_est[snv] = tmp_score
     if index == 3532:
-        print("\n")
-    index = index +1 
+        print(index)
+    index = index +1
 
-## output the deleteriousness score    
+## sort the score
+
+sorted_keys = sorted(score_est, key=score_est.get, reverse=True)
+
+## output the deleteriousness score
 fo_output = open("deleterious_score.txt","w")
-for snv in id_list:
+for snv in sorted_keys:
     fo_output.write(snv + "\t" + "\t".join(deleteriousness_est[snv][:2]) + "\t" + str(deleteriousness_est[snv][2]) + "\n")
-fo_output.close() 
+fo_output.close()
+
 
 
 
