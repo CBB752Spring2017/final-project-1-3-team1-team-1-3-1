@@ -88,8 +88,6 @@ Wang, G.-S., and Cooper, T.A. (2007). Splicing in disease: disruption of the spl
 
 ### Pipeline:
 
-(Data in graph and chart form have been uploaded separately)
-
 Many SNPs are quite common within a population. The output of PROVEAN, one of the programs used to analyze the deleteriousness of a particular variation, provides information on whether the individual SNPs are found within the SNP database or if they are a unique variant. Of the 3530 protein coding SNPs analyzed, 93.2% (3290) were present in the dbSNP, while only 6.8% (240) were unique mutations. 
 	
 Some of the SNPs present in the VCF file are isoforms of the same protein. In the case where each isoform has the same mutation, it will likely have the same effect and classification (due to the similarity between the proteins). However, some cases may have different mutations in each isoform, with different classifications for the different variations. In either case, the presence of non-mutated isoforms or isoforms with benign mutations could have the ability to compensate for any function lost by a damaging variant. This complicates deleteriousness predictions, as it is possible that mutations classified as harmful, which likely have greatly altered structure and function, may not actually be deleterious overall, as the isoform with a proper structure can carry out the required functions.
@@ -104,6 +102,11 @@ The program SIFT was also used to analyze the 3530 protein coding SNPs (3 of the
 	Each of the programs was fairly consistent in their classification of a particular SNP as benign or neutral. PolyPhen2 and SIFT had nearly identical classification into this category (80.8% vs 80.7%), while PROVEAN predicted slightly more neutral variants (87.9%). The three-category classification used in PolyPhen2 meant that fewer variants were predicted to be damaging, with 10.4% compared to the 11.9% and 18.6% seen with PROVEAN and SIFT respectively. Due to the very similar probabilities, SIFT likely classifies the “possibly damaging” mutants seen with PolyPhen2 as “damaging”.
  
 Both PROVEAN and SIFT identified the same number of nonsynonymous, synonymous, and nonsense mutations. This implies that these algorithms can correctly classify the type of mutation, and that both programs have the ability to correctly recognize the codons within the genes and whether the mutation affects the amino acid being encoded. PolyPhen2 has similar results, with slightly fewer synonymous mutations and nonsense mutations detected. The similarity between these programs with regards to codon detection and deleteriousness predictions suggests that though the different algorithms classify the majority of SNPs in a similar way, there are still some variants which are variably classified. Experimental analysis through mutagenesis will be helpful in determining whether these variably classified SNPs are truly harmful or benign. 
+
+
+[SubjectZ SNV Rankings](https://github.com/CBB752Spring2017/final-project-1-3-team1-team-1-3-1/blob/master/polyphen%20damaging%20rankings.xlsx)
+![text](https://github.com/CBB752Spring2017/final-project-1-3-team1-team-1-3-1/blob/master/pipeline_data_and_graphs.docx)
+
 
 References:
 
