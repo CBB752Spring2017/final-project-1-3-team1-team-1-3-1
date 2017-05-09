@@ -15,9 +15,12 @@ Table of Contents
 
 
 **Contributors**
- -Writing: Yuyang Liu\n
- -Coding: Zhaolong Yu\n
- -Pipeline: Megan Brady\n
+ -Writing: Yuyang Liu  
+
+ -Coding: Zhaolong Yu
+
+ -Pipeline: Megan Brady
+
 
 ### Introduction:
 
