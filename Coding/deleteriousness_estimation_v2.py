@@ -188,8 +188,7 @@ def deleteriousness_estimation(snv_element):
         resi_vector = abs(substitute_vector - standard_vector)
         deviance_snv =  sum(abs(substitute_vector - standard_vector))/150
         est_score = 0.05 + deviance_snv + gerp/10     
-    elif mut_status == "synonymous":    
-        est_score = 0.01
+    elif mut_status == "synonymous":
         aa = aa_info[0]
         original_codon = snp_info[0]
         new_codon = snp_info[1]
@@ -202,7 +201,7 @@ def deleteriousness_estimation(snv_element):
         if original_usage < new_usage:
             est_score = 0
         else:
-            est_score = (original_usage - new_usage)/original_usage
+            est_score = 0.01 * (original_usage - new_usage)/original_usage
       
     elif mut_status == "prematureStop":
         ori_pep = snv_element[0][6]
