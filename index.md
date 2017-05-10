@@ -80,10 +80,10 @@ Wang, G.-S., and Cooper, T.A. (2007). Splicing in disease: disruption of the spl
 Deleteriousness Estimation V2 is a tool used for estimating the deleteriousness of a mutation based on properties of amino acids and evolutionary constraint.
 
 ###### Usage
-'python3 deleteriouness_estimation_v2.py -i <input file>'
+`python3 deleteriouness_estimation_v2.py -i <input file>`
 
 ###### Example
-'python3 deleteriouness_estimation_v2.py -i input.txt'
+`python3 deleteriouness_estimation_v2.py -i input.txt`
 
 ###### Input File
 Z.3DStruct_annotation.txt
