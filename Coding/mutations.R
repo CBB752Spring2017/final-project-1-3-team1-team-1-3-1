@@ -7,7 +7,7 @@ library(ggplot2)
 aa_info <- read.delim("/Users/jerome/Projects/deleteriousness_estimation/aa_info2.txt",header = T)
 
 ## scale the matrix
-aa_matrix <- aa_info[,c(2,3,4,5,7,8,10:12)]
+aa_matrix <- aa_info[,c(2,3,4,5,7,8,10:13)]
 for (i in 3:ncol(aa_matrix)) {
     tmp_scale <- scale(aa_matrix[,i])
     aa_matrix[,i] <- tmp_scale
@@ -31,7 +31,7 @@ polyphen2 <- read.delim("/Users/jerome/Projects/deleteriousness_estimation/polyp
 
 ## read the deviance data 
 data <- read.delim("/Users/jerome/Projects/deleteriousness_estimation/training_data.txt", header = F)
-names(data) <- c(names(aa_matrix)[2:9],"outcome")
+names(data) <- c(names(aa_matrix)[2:10],"outcome")
 
 set.seed(42)
 train_index <- sample(1:2831,2000,replace = F) 
