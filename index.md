@@ -80,7 +80,9 @@ Wang, G.-S., and Cooper, T.A. (2007). Splicing in disease: disruption of the spl
 
 #### Results:
 
+1. The score table is included in the repo.
 
+2. The score distribution.
 
 
 
