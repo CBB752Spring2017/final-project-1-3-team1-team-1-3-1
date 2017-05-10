@@ -81,8 +81,11 @@ Wang, G.-S., and Cooper, T.A. (2007). Splicing in disease: disruption of the spl
 #### Results:
 
 1. The score table is included in the repo.
-
+[Score Table](https://github.com/CBB752Spring2017/final-project-1-3-team1-team-1-3-1/blob/master/Coding/deleterious_score.txt)
 2. The score distribution.
+![text](https://github.com/CBB752Spring2017/final-project-1-3-team1-team-1-3-1/blob/master/Coding/V2_estimation.png)
+![text](https://github.com/CBB752Spring2017/final-project-1-3-team1-team-1-3-1/blob/master/Coding/Polyphen2_estimation.png)
+
 
 
 
