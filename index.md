@@ -12,16 +12,6 @@ Table of Contents
 -----------------------
 
 
-
-
-**Contributors**
- -Writing: Yuyang Liu  
-
- -Coding: Zhaolong Yu
-
- -Pipeline: Megan Brady
-
-
 ### Introduction:
   
 #### Functional implications of SNP  
