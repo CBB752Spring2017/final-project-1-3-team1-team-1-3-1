@@ -4,13 +4,6 @@ title: CBB752 Spring 2017
 tagline: Final Project
 ---
 
-Project Title
-------------------
-
-
-Table of Contents
------------------------
-
 
 ### Introduction:
   
